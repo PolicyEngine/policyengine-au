@@ -11,5 +11,5 @@ class rental_income(Variable):
     documentation = "Net rental income from investment properties"
     reference = "https://www.ato.gov.au/individuals-and-families/income-and-deductions/income-you-must-declare/rental-income"
     unit = AUD
-    
+
     default_value = 0

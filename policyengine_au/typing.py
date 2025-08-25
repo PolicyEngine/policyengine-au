@@ -23,7 +23,7 @@ Formula = Any  # Variable formula function
 ParameterType = Union[float, int, bool, str]
 ArrayType = Union[np.ndarray, ArrayLike]
 
-# Australian-specific type aliases  
+# Australian-specific type aliases
 StateCode = str  # NSW, VIC, QLD, SA, WA, TAS, NT, ACT
 PostCode = str  # Australian postcode (4 digits)
 TaxFileNumber = str  # Tax File Number

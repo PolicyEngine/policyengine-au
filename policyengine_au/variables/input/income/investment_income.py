@@ -11,5 +11,5 @@ class investment_income(Variable):
     documentation = "Income from investments including dividends and interest"
     reference = "https://www.ato.gov.au/individuals-and-families/income-and-deductions/income-you-must-declare/investment-income"
     unit = AUD
-    
+
     default_value = 0

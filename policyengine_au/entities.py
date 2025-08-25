@@ -47,7 +47,7 @@ TaxUnit = build_entity(
         },
         {
             "key": "spouse",
-            "plural": "spouses", 
+            "plural": "spouses",
             "label": "Spouse",
             "doc": "The spouse of the primary taxpayer (if applicable)",
             "max": 1,

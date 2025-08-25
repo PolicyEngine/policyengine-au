@@ -23,13 +23,11 @@ AUD = "currency-AUD"
 # Import commonly used functions from core
 from policyengine_core.model_api import *
 
+
 # Common functions for Australian calculations
 def add(entity, period, variables, options=None):
     """Sum multiple variables for an entity in a period."""
-    return sum(
-        entity(variable, period, options) 
-        for variable in variables
-    )
+    return sum(entity(variable, period, options) for variable in variables)
 
 
 def subtract(entity, period, variables, options=None):

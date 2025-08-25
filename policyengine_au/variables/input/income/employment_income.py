@@ -11,5 +11,5 @@ class employment_income(Variable):
     documentation = "Gross income from employment including wages and salaries"
     reference = "https://www.ato.gov.au/individuals-and-families/income-and-deductions/income-you-must-declare/employment-income"
     unit = AUD
-    
+
     default_value = 0

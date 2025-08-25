@@ -11,5 +11,5 @@ class total_deductions(Variable):
     documentation = "Total allowable tax deductions"
     reference = "https://www.ato.gov.au/individuals-and-families/income-and-deductions/deductions-you-can-claim"
     unit = AUD
-    
+
     default_value = 0

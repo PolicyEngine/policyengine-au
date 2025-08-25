@@ -10,6 +10,6 @@ class age(Variable):
     label = "Age"
     documentation = "Age of the person in years"
     reference = "https://www.abs.gov.au/statistics/people"
-    
+
     # Set default value for testing
     default_value = 30
