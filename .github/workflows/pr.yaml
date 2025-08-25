@@ -20,6 +20,7 @@ jobs:
         uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
+          cache-dependency-glob: "**/pyproject.toml"
       
       - name: Install dependencies
         run: |
@@ -52,6 +53,7 @@ jobs:
         uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
+          cache-dependency-glob: "**/pyproject.toml"
       
       - name: Install package
         run: |
@@ -85,6 +87,7 @@ jobs:
         uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
+          cache-dependency-glob: "**/pyproject.toml"
       
       - name: Install package with docs dependencies
         run: |
@@ -109,6 +112,7 @@ jobs:
         uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
+          cache-dependency-glob: "**/pyproject.toml"
       
       - name: Install package
         run: |
