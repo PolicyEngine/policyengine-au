@@ -4,15 +4,14 @@ project:
   description: Microsimulation model for Australia's tax and benefit system
   keywords: [tax, benefits, microsimulation, australia, policy]
   authors:
-    - name: PolicyEngine
+    - name: PolicyEngine Contributors
       email: hello@policyengine.org
   github: https://github.com/PolicyEngine/policyengine-au
-  license: AGPL-3.0
+  license: AGPL-3.0-or-later
   
 site:
   template: book-theme
   title: PolicyEngine Australia Documentation
-  logo: _static/logo.png
   nav:
     - title: GitHub
       url: https://github.com/PolicyEngine/policyengine-au
@@ -26,14 +25,3 @@ site:
     use_repository_button: true
     use_issues_button: true
     use_edit_page_button: true
-    
-  analytics:
-    google_analytics_id: G-XXXXXXXXXX  # Replace with actual ID
-    
-  toc:
-    format: jb-book
-    chapters:
-      - file: index
-      - file: tax-programs
-      - file: benefit-programs  
-      - file: developer-guide
