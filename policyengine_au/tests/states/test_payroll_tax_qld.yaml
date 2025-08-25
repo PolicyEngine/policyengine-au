@@ -1,0 +1,47 @@
+- name: QLD payroll tax below threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 1_200_000
+        state:
+          2024: QLD
+    households:
+      household1:
+        members: [person1]
+  output:
+    qld_payroll_tax: 0
+    state_payroll_tax: 0
+
+- name: QLD payroll tax above threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 2_000_000
+        state:
+          2024: QLD
+    households:
+      household1:
+        members: [person1]
+  output:
+    qld_payroll_tax: 33_250  # (2M - 1.3M) * 0.0475
+    state_payroll_tax: 33_250
+
+- name: QLD payroll tax large employer
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 5_000_000
+        state:
+          2024: QLD
+    households:
+      household1:
+        members: [person1]
+  output:
+    qld_payroll_tax: 175_750  # (5M - 1.3M) * 0.0475
+    state_payroll_tax: 175_750

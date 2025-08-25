@@ -1,0 +1,47 @@
+- name: NT payroll tax below threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 1_400_000
+        state:
+          2024: NT
+    households:
+      household1:
+        members: [person1]
+  output:
+    nt_payroll_tax: 0
+    state_payroll_tax: 0
+
+- name: NT payroll tax above threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 2_000_000
+        state:
+          2024: NT
+    households:
+      household1:
+        members: [person1]
+  output:
+    nt_payroll_tax: 27_500  # (2M - 1.5M) * 0.055
+    state_payroll_tax: 27_500
+
+- name: NT payroll tax large employer
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 4_000_000
+        state:
+          2024: NT
+    households:
+      household1:
+        members: [person1]
+  output:
+    nt_payroll_tax: 137_500  # (4M - 1.5M) * 0.055
+    state_payroll_tax: 137_500

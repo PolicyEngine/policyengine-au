@@ -1,0 +1,32 @@
+description: Australian Capital Territory payroll tax parameters
+reference:
+  - title: Payroll Tax Act 2011 (ACT)
+    href: https://www.legislation.act.gov.au/a/2011-18
+  - title: ACT payroll tax rates and thresholds
+    href: https://www.revenue.act.gov.au/business-tax-help/payroll-tax
+
+rate:
+  description: Standard payroll tax rate
+  metadata:
+    unit: /1
+    label: ACT payroll tax rate
+  values:
+    2024-01-01: 0.0685  # 6.85%
+    
+threshold:
+  description: Annual tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: ACT payroll tax threshold
+  values:
+    2024-01-01: 2_000_000
+    
+monthly_threshold:
+  description: Monthly tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: month
+    label: ACT monthly payroll tax threshold
+  values:
+    2024-01-01: 166_667  # $2m / 12

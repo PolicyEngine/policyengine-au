@@ -1,0 +1,47 @@
+- name: WA payroll tax below threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 900_000
+        state:
+          2024: WA
+    households:
+      household1:
+        members: [person1]
+  output:
+    wa_payroll_tax: 0
+    state_payroll_tax: 0
+
+- name: WA payroll tax above threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 2_000_000
+        state:
+          2024: WA
+    households:
+      household1:
+        members: [person1]
+  output:
+    wa_payroll_tax: 63_461.53  # With diminishing threshold
+    state_payroll_tax: 63_461.53
+
+- name: WA payroll tax large employer
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 5_000_000
+        state:
+          2024: WA
+    households:
+      household1:
+        members: [person1]
+  output:
+    wa_payroll_tax: 253_846.12  # With diminishing threshold
+    state_payroll_tax: 253_846.12

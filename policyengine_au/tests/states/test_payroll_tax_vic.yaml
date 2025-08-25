@@ -1,0 +1,63 @@
+- name: VIC payroll tax below threshold 2024
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 800_000
+        state:
+          2024: VIC
+    households:
+      household1:
+        members: [person1]
+  output:
+    vic_payroll_tax: 0
+    state_payroll_tax: 0
+
+- name: VIC payroll tax above threshold 2024
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 1_500_000
+        state:
+          2024: VIC
+    households:
+      household1:
+        members: [person1]
+  output:
+    vic_payroll_tax: 29_100  # (1.5M - 900k) * 0.0485
+    state_payroll_tax: 29_100
+
+- name: VIC payroll tax above threshold 2025
+  period: 2025
+  input:
+    people:
+      person1:
+        employment_income:
+          2025: 1_500_000
+        state:
+          2025: VIC
+    households:
+      household1:
+        members: [person1]
+  output:
+    vic_payroll_tax: 24_250  # (1.5M - 1M) * 0.0485
+    state_payroll_tax: 24_250
+
+- name: VIC payroll tax large employer
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 3_000_000
+        state:
+          2024: VIC
+    households:
+      household1:
+        members: [person1]
+  output:
+    vic_payroll_tax: 101_850  # (3M - 900k) * 0.0485
+    state_payroll_tax: 101_850

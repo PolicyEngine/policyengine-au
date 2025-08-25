@@ -1,0 +1,72 @@
+description: Western Australia payroll tax parameters
+reference:
+  - title: About payroll tax
+    href: https://www.wa.gov.au/organisation/department-of-treasury-and-finance/about-payroll-tax
+  - title: Pay-roll Tax Assessment Act 2002 (WA)
+    href: https://www.legislation.wa.gov.au/legislation/statutes.nsf/main_mrtitle_1736_homepage.html
+
+rate:
+  description: Standard payroll tax rate
+  metadata:
+    unit: /1
+    label: WA payroll tax rate
+  values:
+    2024-01-01: 0.055  # 5.5%
+    
+rate_large:
+  description: Payroll tax rate for payroll $100m-$1.5b
+  metadata:
+    unit: /1
+    label: WA large employer rate
+  values:
+    2024-01-01: 0.06     # 6% for $100m-$1.5b
+    
+rate_very_large:
+  description: Payroll tax rate for payroll over $1.5b
+  metadata:
+    unit: /1
+    label: WA very large employer rate
+  values:
+    2024-01-01: 0.065    # 6.5% for over $1.5b
+    
+threshold:
+  description: Annual tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: WA payroll tax threshold
+  values:
+    2024-01-01: 1_000_000
+    
+monthly_threshold:
+  description: Monthly tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: month
+    label: WA monthly payroll tax threshold
+  values:
+    2024-01-01: 83_333  # $1m / 12
+    
+diminishing_threshold_lower:
+  description: Lower limit for diminishing threshold
+  metadata:
+    unit: currency-AUD
+    label: WA diminishing threshold lower limit
+  values:
+    2024-01-01: 1_000_000
+    
+diminishing_threshold_upper:
+  description: Upper limit for diminishing threshold
+  metadata:
+    unit: currency-AUD
+    label: WA diminishing threshold upper limit
+  values:
+    2024-01-01: 7_500_000
+    
+diminishing_threshold_rate:
+  description: Reduction rate for diminishing threshold
+  metadata:
+    unit: /1
+    label: WA diminishing threshold reduction rate
+  values:
+    2024-01-01: 0.153846  # $2 reduction per $13 over threshold

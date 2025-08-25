@@ -1,0 +1,57 @@
+description: Queensland payroll tax parameters
+reference:
+  - title: Payroll tax rates and thresholds
+    href: https://qro.qld.gov.au/payroll-tax/calculate/rates-thresholds/
+  - title: Payroll Tax Act 1971 (QLD)
+    href: https://www.legislation.qld.gov.au/view/html/inforce/current/act-1971-062
+
+rate:
+  description: Standard payroll tax rate (up to $6.5M)
+  metadata:
+    unit: /1
+    label: QLD payroll tax rate
+  values:
+    2024-01-01: 0.0475  # 4.75%
+    
+rate_large:
+  description: Payroll tax rate for wages over $6.5M
+  metadata:
+    unit: /1
+    label: QLD large employer rate
+  values:
+    2024-01-01: 0.0495  # 4.95%
+    
+large_employer_threshold:
+  description: Threshold for higher rate application
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: QLD large employer threshold
+  values:
+    2024-01-01: 6_500_000
+    
+regional_discount:
+  description: Regional Queensland employer discount
+  metadata:
+    unit: /1
+    label: QLD regional discount rate
+  values:
+    2024-01-01: 0.01  # 1% discount until 30 June 2030
+    
+threshold:
+  description: Annual tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: QLD payroll tax threshold
+  values:
+    2024-01-01: 1_300_000
+    
+monthly_threshold:
+  description: Monthly tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: month
+    label: QLD monthly payroll tax threshold
+  values:
+    2024-01-01: 108_333  # $1.3m / 12

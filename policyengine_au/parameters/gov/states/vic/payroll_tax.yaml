@@ -1,0 +1,58 @@
+description: Victoria payroll tax parameters
+reference:
+  - title: Payroll tax (current rates)
+    href: https://www.sro.vic.gov.au/rates-taxes-duties-and-levies/payroll-tax-current-rates
+  - title: Payroll Tax Act 2007 (VIC)
+    href: https://www.legislation.vic.gov.au/in-force/acts/payroll-tax-act-2007
+
+rate:
+  description: Standard payroll tax rate
+  metadata:
+    unit: /1
+    label: VIC payroll tax rate
+  values:
+    2024-01-01: 0.0485  # 4.85%
+    
+regional_rate:
+  description: Regional Victoria payroll tax rate
+  metadata:
+    unit: /1
+    label: VIC regional payroll tax rate
+  values:
+    2024-01-01: 0.012125  # 1.2125%
+    
+threshold:
+  description: Annual tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: VIC payroll tax threshold
+  values:
+    2024-01-01: 900_000
+    2025-01-01: 1_000_000
+    
+monthly_threshold:
+  description: Monthly tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: month
+    label: VIC monthly payroll tax threshold
+  values:
+    2024-01-01: 75_000  # $900k / 12
+    2025-01-01: 83_333  # $1m / 12
+    
+mental_health_levy_10m:
+  description: Mental health levy rate for payroll $10m-$100m
+  metadata:
+    unit: /1
+    label: VIC mental health levy (10m)
+  values:
+    2024-01-01: 0.01    # 1% for payroll $10m-$100m
+    
+mental_health_levy_100m:
+  description: Mental health levy rate for payroll over $100m
+  metadata:
+    unit: /1
+    label: VIC mental health levy (100m)
+  values:
+    2024-01-01: 0.02   # 2% for payroll over $100m

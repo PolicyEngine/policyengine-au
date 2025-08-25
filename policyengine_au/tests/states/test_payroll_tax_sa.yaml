@@ -1,0 +1,63 @@
+- name: SA payroll tax below threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 1_400_000
+        state:
+          2024: SA
+    households:
+      household1:
+        members: [person1]
+  output:
+    sa_payroll_tax: 0
+    state_payroll_tax: 0
+
+- name: SA payroll tax small employer rate
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 1_600_000
+        state:
+          2024: SA
+    households:
+      household1:
+        members: [person1]
+  output:
+    sa_payroll_tax: 2_470  # (1.6M - 1.5M) * 0.0247
+    state_payroll_tax: 2_470
+
+- name: SA payroll tax standard rate
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 2_000_000
+        state:
+          2024: SA
+    households:
+      household1:
+        members: [person1]
+  output:
+    sa_payroll_tax: 24_750  # (2M - 1.5M) * 0.0495
+    state_payroll_tax: 24_750
+
+- name: SA payroll tax large employer
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 3_000_000
+        state:
+          2024: SA
+    households:
+      household1:
+        members: [person1]
+  output:
+    sa_payroll_tax: 74_250  # (3M - 1.5M) * 0.0495
+    state_payroll_tax: 74_250

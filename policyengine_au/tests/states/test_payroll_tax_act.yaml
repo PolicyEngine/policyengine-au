@@ -1,0 +1,47 @@
+- name: ACT payroll tax below threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 1_900_000
+        state:
+          2024: ACT
+    households:
+      household1:
+        members: [person1]
+  output:
+    act_payroll_tax: 0
+    state_payroll_tax: 0
+
+- name: ACT payroll tax above threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 3_000_000
+        state:
+          2024: ACT
+    households:
+      household1:
+        members: [person1]
+  output:
+    act_payroll_tax: 68_500  # (3M - 2M) * 0.0685
+    state_payroll_tax: 68_500
+
+- name: ACT payroll tax large employer
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 5_000_000
+        state:
+          2024: ACT
+    households:
+      household1:
+        members: [person1]
+  output:
+    act_payroll_tax: 205_500  # (5M - 2M) * 0.0685
+    state_payroll_tax: 205_500

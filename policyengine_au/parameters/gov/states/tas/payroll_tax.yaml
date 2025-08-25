@@ -1,0 +1,54 @@
+description: Tasmania payroll tax parameters
+reference:
+  - title: Rates and thresholds
+    href: https://www.sro.tas.gov.au/payroll-tax/rates-thresholds
+  - title: Payroll Tax Act 2008 (TAS)
+    href: https://www.legislation.tas.gov.au/view/html/inforce/current/act-2008-016
+
+rate_small:
+  description: Payroll tax rate for wages $1.25m-$2m
+  metadata:
+    unit: /1
+    label: TAS small employer rate
+  values:
+    2024-01-01: 0.04  # 4%
+    2025-07-01: 0.04  # Remains 4% in 2025-26
+    
+rate_standard:
+  description: Payroll tax rate for wages over $2m
+  metadata:
+    unit: /1
+    label: TAS standard rate
+  values:
+    2024-01-01: 0.061  # 6.1%
+    2025-07-01: 0.061  # Remains 6.1% in 2025-26
+    
+threshold:
+  description: Annual tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: TAS payroll tax threshold
+  values:
+    2024-01-01: 1_250_000
+    2025-07-01: 1_250_000
+    
+monthly_threshold:
+  description: Monthly tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: month
+    label: TAS monthly payroll tax threshold
+  values:
+    2024-01-01: 104_167  # $1.25m / 12
+    2025-07-01: 104_167
+    
+large_employer_threshold:
+  description: Threshold for standard rate application
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: TAS large employer threshold
+  values:
+    2024-01-01: 2_000_000
+    2025-07-01: 2_000_000

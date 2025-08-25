@@ -1,0 +1,32 @@
+description: New South Wales payroll tax parameters
+reference:
+  - title: Payroll tax thresholds and rates
+    href: https://www.revenue.nsw.gov.au/taxes-duties-levies-royalties/payroll-tax/lodge-and-pay-returns/thresholds-and-rates
+  - title: Payroll Tax Act 2007 (NSW)
+    href: https://legislation.nsw.gov.au/view/html/inforce/current/act-2007-021
+
+rate:
+  description: Payroll tax rate
+  metadata:
+    unit: /1
+    label: NSW payroll tax rate
+  values:
+    2024-01-01: 0.0545  # 5.45%
+    
+threshold:
+  description: Annual tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: NSW payroll tax threshold
+  values:
+    2024-01-01: 1_200_000
+    
+monthly_threshold:
+  description: Monthly tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: month
+    label: NSW monthly payroll tax threshold
+  values:
+    2024-01-01: 100_000  # $1.2m / 12

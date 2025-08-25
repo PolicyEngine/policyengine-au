@@ -1,0 +1,32 @@
+- name: QLD payroll tax very large employer over 6.5M
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 10_000_000
+        state:
+          2024: QLD
+    households:
+      household1:
+        members: [person1]
+  output:
+    qld_payroll_tax: 420_250  # (6.5M - 1.3M) * 0.0475 + (10M - 6.5M) * 0.0495
+    state_payroll_tax: 420_250
+    # Calculation: 5.2M * 4.75% = 247,000, plus 3.5M * 4.95% = 173,250, total = 420,250
+    
+- name: QLD payroll tax at 6.5M boundary
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 6_500_000
+        state:
+          2024: QLD
+    households:
+      household1:
+        members: [person1]
+  output:
+    qld_payroll_tax: 247_000  # (6.5M - 1.3M) * 0.0475
+    state_payroll_tax: 247_000

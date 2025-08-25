@@ -1,0 +1,67 @@
+description: South Australia payroll tax parameters
+reference:
+  - title: Rates and Thresholds
+    href: https://www.revenuesa.sa.gov.au/payroll-tax/rates-and-thresholds
+  - title: Payroll Tax Act 2009 (SA)
+    href: https://www.legislation.sa.gov.au/LZ/C/A/Payroll%20Tax%20Act%202009.aspx
+
+rate_small:
+  description: Payroll tax rate for wages $1.5m-$1.7m
+  metadata:
+    unit: /1
+    label: SA small employer rate
+  values:
+    2024-01-01: 0.0247  # 2.47%
+    
+rate_standard:
+  description: Payroll tax rate for wages over $1.7m
+  metadata:
+    unit: /1
+    label: SA standard rate
+  values:
+    2024-01-01: 0.0495  # 4.95%
+    
+threshold:
+  description: Annual tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: SA payroll tax threshold
+  values:
+    2024-01-01: 1_500_000
+    
+monthly_threshold:
+  description: Monthly tax-free threshold
+  metadata:
+    unit: currency-AUD
+    period: month
+    label: SA monthly payroll tax threshold
+  values:
+    2024-01-01: 125_000  # $1.5m / 12
+    
+small_employer_limit:
+  description: Upper limit for small employer rate
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: SA small employer limit
+  values:
+    2024-01-01: 1_700_000
+    
+deduction_annual:
+  description: Maximum annual deduction for SA-only employers
+  metadata:
+    unit: currency-AUD
+    period: year
+    label: SA annual deduction
+  values:
+    2024-01-01: 600_000
+    
+deduction_monthly:
+  description: Maximum monthly deduction for SA-only employers
+  metadata:
+    unit: currency-AUD
+    period: month
+    label: SA monthly deduction
+  values:
+    2024-01-01: 50_000  # $600k / 12

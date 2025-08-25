@@ -1,0 +1,63 @@
+- name: TAS payroll tax below threshold
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 1_200_000
+        state:
+          2024: TAS
+    households:
+      household1:
+        members: [person1]
+  output:
+    tas_payroll_tax: 0
+    state_payroll_tax: 0
+
+- name: TAS payroll tax small employer rate
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 1_800_000
+        state:
+          2024: TAS
+    households:
+      household1:
+        members: [person1]
+  output:
+    tas_payroll_tax: 22_000  # (1.8M - 1.25M) * 0.04
+    state_payroll_tax: 22_000
+
+- name: TAS payroll tax standard rate
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 2_500_000
+        state:
+          2024: TAS
+    households:
+      household1:
+        members: [person1]
+  output:
+    tas_payroll_tax: 76_250  # (2.5M - 1.25M) * 0.061
+    state_payroll_tax: 76_250
+
+- name: TAS payroll tax large employer
+  period: 2024
+  input:
+    people:
+      person1:
+        employment_income:
+          2024: 4_000_000
+        state:
+          2024: TAS
+    households:
+      household1:
+        members: [person1]
+  output:
+    tas_payroll_tax: 167_750  # (4M - 1.25M) * 0.061
+    state_payroll_tax: 167_750
