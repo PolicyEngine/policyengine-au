@@ -1,0 +1,76 @@
+description: Age Pension income test parameters
+reference:
+  - title: Age Pension income test
+    href: https://www.servicesaustralia.gov.au/income-test-for-age-pension
+metadata:
+  label: Age Pension income test
+income_free_area:
+  description: Fortnightly income allowed before pension reduction
+  metadata:
+    unit: currency-AUD
+    period: fortnight
+  single:
+    values:
+      2023-09-20: 204.00
+      2024-01-01: 212.00
+      2024-07-01: 212.00
+  couple_combined:
+    values:
+      2023-09-20: 360.00
+      2024-01-01: 372.00
+      2024-07-01: 372.00
+  couple_separated_illness:
+    values:
+      2023-09-20: 360.00
+      2024-01-01: 372.00
+      2024-07-01: 372.00
+taper_rate:
+  description: Rate at which pension reduces for income above free area
+  metadata:
+    unit: /1
+  values:
+    2023-09-20: 0.50  # 50 cents per dollar
+    2024-01-01: 0.50
+    2024-07-01: 0.50
+work_bonus:
+  description: Additional income from work that doesn't affect pension
+  metadata:
+    unit: currency-AUD
+  fortnightly_amount:
+    description: Amount of employment income exempt per fortnight
+    values:
+      2023-09-20: 300.00
+      2024-01-01: 300.00
+      2024-07-01: 300.00
+  maximum_accrual:
+    description: Maximum unused work bonus that can be accrued
+    values:
+      2023-09-20: 11_800.00
+      2024-01-01: 11_800.00
+      2024-07-01: 11_800.00
+deeming_rates:
+  description: Assumed rates of return on financial investments
+  metadata:
+    unit: /1
+  lower_rate:
+    description: Deeming rate for amounts below threshold
+    values:
+      2023-07-01: 0.0025  # 0.25% per annum
+      2024-05-01: 0.0025
+  upper_rate:
+    description: Deeming rate for amounts above threshold
+    values:
+      2023-07-01: 0.0225  # 2.25% per annum
+      2024-05-01: 0.0225
+deeming_thresholds:
+  description: Thresholds for deeming rate application
+  metadata:
+    unit: currency-AUD
+  single:
+    values:
+      2023-07-01: 60_400
+      2024-07-01: 62_600
+  couple_combined:
+    values:
+      2023-07-01: 100_200
+      2024-07-01: 103_800

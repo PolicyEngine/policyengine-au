@@ -1,0 +1,66 @@
+description: Family Tax Benefit Part A income test parameters
+reference:
+  - title: Family Tax Benefit Part A - Income test
+    href: https://www.servicesaustralia.gov.au/income-test-for-family-tax-benefit-part
+metadata:
+  label: FTB Part A income test
+income_free_area:
+  description: Family income level for maximum FTB Part A
+  metadata:
+    unit: currency-AUD
+    period: year
+  values:
+    2023-07-01: 58_108
+    2024-01-01: 60_544
+    2024-07-01: 63_166
+taper_rate_1:
+  description: Reduction rate for income above free area (until base rate)
+  metadata:
+    unit: /1
+  values:
+    2023-07-01: 0.20  # 20 cents per dollar
+    2024-01-01: 0.20
+    2024-07-01: 0.20
+higher_income_free_area:
+  description: Income level where Part A reduces from base rate
+  metadata:
+    unit: currency-AUD
+    period: year
+  values:
+    2023-07-01: 103_368
+    2024-01-01: 106_629
+    2024-07-01: 111_038
+taper_rate_2:
+  description: Reduction rate for income above higher threshold
+  metadata:
+    unit: /1
+  values:
+    2023-07-01: 0.30  # 30 cents per dollar
+    2024-01-01: 0.30
+    2024-07-01: 0.30
+maintenance_income_test:
+  description: Child support/maintenance income test
+  free_area:
+    description: Maintenance income free area
+    metadata:
+      unit: currency-AUD
+      period: year
+    base_amount:
+      values:
+        2023-07-01: 1_846.69
+        2024-01-01: 1_921.22
+        2024-07-01: 2_004.55
+    per_additional_child:
+      description: Additional free area per child after first
+      values:
+        2023-07-01: 615.57
+        2024-01-01: 640.41
+        2024-07-01: 668.19
+  reduction_rate:
+    description: FTB reduction per dollar of maintenance above free area
+    metadata:
+      unit: /1
+    values:
+      2023-07-01: 0.50  # 50 cents per dollar
+      2024-01-01: 0.50
+      2024-07-01: 0.50

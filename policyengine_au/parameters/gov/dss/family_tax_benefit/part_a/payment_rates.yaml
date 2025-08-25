@@ -1,0 +1,80 @@
+description: Family Tax Benefit Part A payment rates
+reference:
+  - title: Family Tax Benefit Part A - Payment rates
+    href: https://www.servicesaustralia.gov.au/family-tax-benefit-part-payment-rates
+metadata:
+  unit: currency-AUD
+  label: FTB Part A rates
+  period: fortnight
+  uprating: gov.treasury.cpi
+maximum_rates:
+  child_under_13:
+    description: Maximum rate per child under 13
+    values:
+      2023-07-01: 209.76
+      2024-01-01: 216.04
+      2024-07-01: 225.12
+  child_13_to_15:
+    description: Maximum rate per child aged 13-15
+    values:
+      2023-07-01: 272.18
+      2024-01-01: 280.34
+      2024-07-01: 292.18
+  child_16_to_19:
+    description: Maximum rate per child aged 16-19 in secondary school
+    values:
+      2023-07-01: 272.18
+      2024-01-01: 280.34
+      2024-07-01: 292.18
+base_rates:
+  child_under_18:
+    description: Base rate per child under 18
+    values:
+      2023-07-01: 65.66
+      2024-01-01: 67.62
+      2024-07-01: 70.46
+  child_18_to_19:
+    description: Base rate per child aged 18-19 in secondary school
+    values:
+      2023-07-01: 80.78
+      2024-01-01: 83.20
+      2024-07-01: 86.70
+supplement:
+  maximum_per_child:
+    description: Annual FTB Part A supplement per child
+    metadata:
+      period: year
+    values:
+      2023-07-01: 817.60
+      2024-01-01: 842.35
+      2024-07-01: 866.30
+  income_limit:
+    description: Family income limit to receive supplement
+    metadata:
+      period: year
+    values:
+      2023-07-01: 80_000
+      2024-01-01: 80_000
+      2024-07-01: 80_000
+large_family_supplement:
+  description: Extra payment for 4th and subsequent children
+  metadata:
+    period: fortnight
+  values:
+    2023-07-01: 12.96
+    2024-01-01: 13.34
+    2024-07-01: 13.90
+multiple_birth_allowance:
+  description: Extra payment for triplets or more
+  metadata:
+    period: fortnight
+  triplets:
+    values:
+      2023-07-01: 171.84
+      2024-01-01: 177.02
+      2024-07-01: 184.46
+  quadruplets_or_more:
+    values:
+      2023-07-01: 229.14
+      2024-01-01: 236.04
+      2024-07-01: 245.96

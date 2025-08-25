@@ -1,0 +1,53 @@
+description: Medicare levy low income thresholds for reduction or exemption
+reference:
+  - title: Medicare levy reduction for low-income earners
+    href: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy/medicare-levy-reduction-for-low-income-earners
+metadata:
+  unit: currency-AUD
+  label: Medicare levy low income thresholds
+  period: year
+singles:
+  no_levy_threshold:
+    description: Income below which no Medicare levy is payable for singles
+    values:
+      2022-07-01: 23_365
+      2023-07-01: 24_276
+      2024-07-01: 26_000
+  full_levy_threshold:
+    description: Income above which full Medicare levy applies for singles
+    values:
+      2022-07-01: 29_207
+      2023-07-01: 30_345
+      2024-07-01: 32_500
+families:
+  no_levy_threshold:
+    description: Family income below which no Medicare levy is payable
+    values:
+      2022-07-01: 39_402
+      2023-07-01: 40_939
+      2024-07-01: 43_846
+  full_levy_threshold:
+    description: Family income above which full Medicare levy applies
+    values:
+      2022-07-01: 49_252
+      2023-07-01: 51_174
+      2024-07-01: 54_807
+  additional_child_or_student:
+    description: Additional threshold per dependent child or student
+    values:
+      2022-07-01: 3_619
+      2023-07-01: 3_760
+      2024-07-01: 4_027
+seniors_pensioners:
+  no_levy_threshold:
+    description: Income below which no Medicare levy for seniors and pensioners
+    values:
+      2022-07-01: 36_925
+      2023-07-01: 38_365
+      2024-07-01: 42_000
+  full_levy_threshold:
+    description: Income above which full Medicare levy for seniors and pensioners
+    values:
+      2022-07-01: 46_156
+      2023-07-01: 47_956
+      2024-07-01: 52_500

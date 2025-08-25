@@ -1,0 +1,53 @@
+description: Superannuation guarantee contribution rates
+reference:
+  - title: Super guarantee percentage
+    href: https://www.ato.gov.au/employers/super-for-employers/super-guarantee-compliance-and-obligations/how-much-super-to-pay/super-guarantee-percentage
+metadata:
+  unit: /1
+  label: Superannuation guarantee rates
+super_guarantee_rate:
+  description: Employer mandatory superannuation contribution rate
+  values:
+    2022-07-01: 0.105  # 10.5%
+    2023-07-01: 0.11   # 11%
+    2024-07-01: 0.115  # 11.5%
+    2025-07-01: 0.12   # 12% (scheduled)
+concessional_contribution_cap:
+  description: Annual cap on concessional (pre-tax) super contributions
+  metadata:
+    unit: currency-AUD
+    period: year
+  values:
+    2022-07-01: 27_500
+    2023-07-01: 27_500
+    2024-07-01: 30_000
+non_concessional_contribution_cap:
+  description: Annual cap on non-concessional (after-tax) super contributions
+  metadata:
+    unit: currency-AUD
+    period: year
+  values:
+    2022-07-01: 110_000
+    2023-07-01: 110_000
+    2024-07-01: 120_000
+contributions_tax_rate:
+  description: Tax rate on concessional super contributions
+  values:
+    2022-07-01: 0.15  # 15%
+    2023-07-01: 0.15
+    2024-07-01: 0.15
+division_293_threshold:
+  description: Income threshold for additional 15% tax on super contributions
+  metadata:
+    unit: currency-AUD
+    period: year
+  values:
+    2022-07-01: 250_000
+    2023-07-01: 250_000
+    2024-07-01: 250_000
+division_293_additional_tax:
+  description: Additional tax rate for high income earners' super contributions
+  values:
+    2022-07-01: 0.15  # Additional 15% (total 30%)
+    2023-07-01: 0.15
+    2024-07-01: 0.15

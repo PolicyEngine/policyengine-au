@@ -1,0 +1,39 @@
+description: Family Tax Benefit Part B payment rates
+reference:
+  - title: Family Tax Benefit Part B - Payment rates
+    href: https://www.servicesaustralia.gov.au/family-tax-benefit-part-b-payment-rates
+metadata:
+  unit: currency-AUD
+  label: FTB Part B rates
+  period: fortnight
+  uprating: gov.treasury.cpi
+maximum_rates:
+  youngest_child_under_5:
+    description: Maximum rate when youngest child is under 5
+    values:
+      2023-07-01: 176.82
+      2024-01-01: 182.18
+      2024-07-01: 189.78
+  youngest_child_5_to_18:
+    description: Maximum rate when youngest child is 5-18
+    values:
+      2023-07-01: 123.48
+      2024-01-01: 127.18
+      2024-07-01: 132.48
+supplement:
+  maximum_per_family:
+    description: Annual FTB Part B supplement per family
+    metadata:
+      period: year
+    values:
+      2023-07-01: 418.35
+      2024-01-01: 431.10
+      2024-07-01: 436.50
+  income_limit:
+    description: Family income limit to receive supplement
+    metadata:
+      period: year
+    values:
+      2023-07-01: 80_000
+      2024-01-01: 80_000
+      2024-07-01: 80_000

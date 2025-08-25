@@ -1,0 +1,100 @@
+description: HECS-HELP (student loan) repayment income thresholds
+reference:
+  - title: Study and training loan repayment thresholds and rates
+    href: https://www.ato.gov.au/individuals-and-families/study-and-training-support-loans/study-and-training-loan-repayment-thresholds-and-rates
+metadata:
+  unit: currency-AUD
+  label: HECS-HELP repayment thresholds
+  period: year
+  uprating: gov.treasury.cpi
+thresholds:
+  minimum:
+    description: Minimum repayment income threshold
+    values:
+      2023-07-01: 51_550
+      2024-07-01: 54_435
+  band_2:
+    description: Threshold for 2% repayment rate
+    values:
+      2023-07-01: 59_519
+      2024-07-01: 62_851
+  band_3:
+    description: Threshold for 2.5% repayment rate
+    values:
+      2023-07-01: 63_090
+      2024-07-01: 66_621
+  band_4:
+    description: Threshold for 3% repayment rate
+    values:
+      2023-07-01: 66_876
+      2024-07-01: 70_619
+  band_5:
+    description: Threshold for 3.5% repayment rate
+    values:
+      2023-07-01: 70_889
+      2024-07-01: 74_856
+  band_6:
+    description: Threshold for 4% repayment rate
+    values:
+      2023-07-01: 75_145
+      2024-07-01: 79_347
+  band_7:
+    description: Threshold for 4.5% repayment rate
+    values:
+      2023-07-01: 79_654
+      2024-07-01: 84_108
+  band_8:
+    description: Threshold for 5% repayment rate
+    values:
+      2023-07-01: 84_433
+      2024-07-01: 89_155
+  band_9:
+    description: Threshold for 5.5% repayment rate
+    values:
+      2023-07-01: 89_499
+      2024-07-01: 94_504
+  band_10:
+    description: Threshold for 6% repayment rate
+    values:
+      2023-07-01: 94_869
+      2024-07-01: 100_175
+  band_11:
+    description: Threshold for 6.5% repayment rate
+    values:
+      2023-07-01: 100_561
+      2024-07-01: 106_185
+  band_12:
+    description: Threshold for 7% repayment rate
+    values:
+      2023-07-01: 106_595
+      2024-07-01: 112_556
+  band_13:
+    description: Threshold for 7.5% repayment rate
+    values:
+      2023-07-01: 112_991
+      2024-07-01: 119_310
+  band_14:
+    description: Threshold for 8% repayment rate
+    values:
+      2023-07-01: 119_770
+      2024-07-01: 126_469
+  band_15:
+    description: Threshold for 8.5% repayment rate
+    values:
+      2023-07-01: 126_956
+      2024-07-01: 134_057
+  band_16:
+    description: Threshold for 9% repayment rate
+    values:
+      2023-07-01: 134_573
+      2024-07-01: 142_101
+  band_17:
+    description: Threshold for 9.5% repayment rate
+    values:
+      2023-07-01: 142_648
+      2024-07-01: 150_627
+  band_18:
+    description: Threshold for 10% repayment rate
+    values:
+      2023-07-01: 151_207
+      2024-07-01: 159_664

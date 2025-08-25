@@ -1,0 +1,11 @@
+description: Medicare levy rate
+reference:
+  - title: Medicare levy
+    href: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy
+metadata:
+  unit: /1
+  label: Medicare levy rate
+values:
+  2022-07-01: 0.02  # 2% of taxable income
+  2023-07-01: 0.02
+  2024-07-01: 0.02

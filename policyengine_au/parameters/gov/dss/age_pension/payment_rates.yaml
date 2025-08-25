@@ -1,0 +1,86 @@
+description: Age Pension payment rates
+reference:
+  - title: Age Pension - Payment rates
+    href: https://www.servicesaustralia.gov.au/payment-rates-for-age-pension
+metadata:
+  unit: currency-AUD
+  label: Age Pension rates
+  period: fortnight
+  uprating: gov.treasury.cpi
+single:
+  maximum_basic_rate:
+    description: Maximum basic rate for single pensioners
+    values:
+      2023-09-20: 1_096.70
+      2024-01-01: 1_116.30
+      2024-03-20: 1_144.40
+  maximum_pension_supplement:
+    description: Maximum pension supplement for singles
+    values:
+      2023-09-20: 81.60
+      2024-01-01: 83.20
+      2024-03-20: 85.20
+  energy_supplement:
+    description: Energy supplement for singles
+    values:
+      2023-09-20: 14.10
+      2024-01-01: 14.10
+      2024-03-20: 14.10
+couple:
+  combined:
+    maximum_basic_rate:
+      description: Maximum basic combined rate for couples
+      values:
+        2023-09-20: 1_651.40
+        2024-01-01: 1_682.80
+        2024-03-20: 1_725.20
+    maximum_pension_supplement:
+      description: Maximum pension supplement for couples combined
+      values:
+        2023-09-20: 122.80
+        2024-01-01: 125.20
+        2024-03-20: 128.40
+    energy_supplement:
+      description: Energy supplement for couples combined
+      values:
+        2023-09-20: 21.20
+        2024-01-01: 21.20
+        2024-03-20: 21.20
+  per_person:
+    maximum_basic_rate:
+      description: Maximum basic rate per person in couple
+      values:
+        2023-09-20: 825.70
+        2024-01-01: 841.40
+        2024-03-20: 862.60
+    maximum_pension_supplement:
+      description: Maximum pension supplement per person in couple
+      values:
+        2023-09-20: 61.40
+        2024-01-01: 62.60
+        2024-03-20: 64.20
+    energy_supplement:
+      description: Energy supplement per person in couple
+      values:
+        2023-09-20: 10.60
+        2024-01-01: 10.60
+        2024-03-20: 10.60
+  separated_illness:
+    maximum_basic_rate:
+      description: Rate when couple separated due to illness
+      values:
+        2023-09-20: 1_096.70
+        2024-01-01: 1_116.30
+        2024-03-20: 1_144.40
+    maximum_pension_supplement:
+      description: Pension supplement when separated due to illness
+      values:
+        2023-09-20: 81.60
+        2024-01-01: 83.20
+        2024-03-20: 85.20
+    energy_supplement:
+      description: Energy supplement when separated due to illness
+      values:
+        2023-09-20: 14.10
+        2024-01-01: 14.10
+        2024-03-20: 14.10

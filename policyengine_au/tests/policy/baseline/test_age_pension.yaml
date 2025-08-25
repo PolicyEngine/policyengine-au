@@ -1,0 +1,58 @@
+- name: Single pensioner eligible for full Age Pension
+  period: 2024
+  input:
+    people:
+      pensioner:
+        age: 70
+        employment_income: 0
+        investment_income: 0
+    households:
+      household:
+        members: [pensioner]
+  output:
+    age_pension_eligible: True
+
+- name: Person below Age Pension age not eligible
+  period: 2024
+  input:
+    people:
+      person:
+        age: 65
+        employment_income: 0
+    households:
+      household:
+        members: [person]
+  output:
+    age_pension_eligible: False
+
+- name: Person at Age Pension age threshold
+  period: 2024
+  input:
+    people:
+      pensioner:
+        age: 67
+        employment_income: 0
+    households:
+      household:
+        members: [pensioner]
+  output:
+    age_pension_eligible: True
+
+- name: Couple both eligible for Age Pension
+  period: 2024
+  input:
+    people:
+      pensioner_1:
+        age: 70
+        employment_income: 0
+      pensioner_2:
+        age: 68
+        employment_income: 0
+    households:
+      household:
+        members: [pensioner_1, pensioner_2]
+  output:
+    pensioner_1:
+      age_pension_eligible: True
+    pensioner_2:
+      age_pension_eligible: True

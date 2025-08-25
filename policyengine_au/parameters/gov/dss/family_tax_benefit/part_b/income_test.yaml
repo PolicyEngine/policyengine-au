@@ -1,0 +1,39 @@
+description: Family Tax Benefit Part B income test parameters
+reference:
+  - title: Family Tax Benefit Part B - Income test
+    href: https://www.servicesaustralia.gov.au/income-test-for-family-tax-benefit-part-b
+metadata:
+  label: FTB Part B income test
+primary_earner_income_limit:
+  description: Primary earner income limit for Part B eligibility
+  metadata:
+    unit: currency-AUD
+    period: year
+  single_parent:
+    description: No income limit for single parents
+    values:
+      2023-07-01: .inf  # No limit
+      2024-01-01: .inf
+      2024-07-01: .inf
+  couple:
+    values:
+      2023-07-01: 100_000
+      2024-01-01: 100_000
+      2024-07-01: 103_000
+secondary_earner_income_free_area:
+  description: Secondary earner income allowed before Part B reduces
+  metadata:
+    unit: currency-AUD
+    period: year
+  values:
+    2023-07-01: 6_186
+    2024-01-01: 6_437
+    2024-07-01: 6_716
+secondary_earner_taper_rate:
+  description: Reduction rate for secondary earner income above free area
+  metadata:
+    unit: /1
+  values:
+    2023-07-01: 0.20  # 20 cents per dollar
+    2024-01-01: 0.20
+    2024-07-01: 0.20

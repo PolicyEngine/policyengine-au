@@ -1,0 +1,54 @@
+description: JobSeeker Payment rates
+reference:
+  - title: JobSeeker Payment - How much you can get
+    href: https://www.servicesaustralia.gov.au/how-much-jobseeker-payment-you-can-get
+metadata:
+  unit: currency-AUD
+  label: JobSeeker Payment rates
+  period: fortnight
+  uprating: gov.treasury.cpi
+single:
+  no_children:
+    under_22:
+      description: Single, no children, under 22
+      values:
+        2023-09-20: 693.10
+        2024-01-01: 713.00
+        2024-09-20: 762.70
+    22_and_over:
+      description: Single, no children, 22 and over
+      values:
+        2023-09-20: 693.10
+        2024-01-01: 713.00
+        2024-09-20: 762.70
+  with_dependent_children:
+    description: Single with dependent children
+    values:
+      2023-09-20: 749.20
+      2024-01-01: 770.80
+      2024-09-20: 824.60
+  principal_carer:
+    description: Single, principal carer (exemption from mutual obligations)
+    values:
+      2023-09-20: 922.10
+      2024-01-01: 949.30
+      2024-09-20: 1015.70
+  aged_60_plus:
+    description: Single, aged 60 or over, after 9 continuous months
+    values:
+      2023-09-20: 749.20
+      2024-01-01: 770.80
+      2024-09-20: 824.60
+partnered:
+  each:
+    description: Partnered, per person
+    values:
+      2023-09-20: 631.20
+      2024-01-01: 649.50
+      2024-09-20: 695.00
+  separated_illness:
+    description: Partnered, separated due to illness
+    values:
+      2023-09-20: 693.10
+      2024-01-01: 713.00
+      2024-09-20: 762.70

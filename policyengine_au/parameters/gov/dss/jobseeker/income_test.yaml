@@ -1,0 +1,73 @@
+description: JobSeeker Payment income test parameters
+reference:
+  - title: JobSeeker Payment income test
+    href: https://www.servicesaustralia.gov.au/income-test-for-jobseeker-payment
+metadata:
+  label: JobSeeker income test
+income_free_area:
+  description: Fortnightly income allowed before payment reduction
+  metadata:
+    unit: currency-AUD
+    period: fortnight
+  single:
+    values:
+      2023-09-20: 150.00
+      2024-01-01: 150.00
+      2024-09-20: 150.00
+  partnered:
+    values:
+      2023-09-20: 150.00
+      2024-01-01: 150.00
+      2024-09-20: 150.00
+  with_dependent_children_additional:
+    description: Additional income free area per dependent child
+    values:
+      2023-09-20: 24.00
+      2024-01-01: 24.00
+      2024-09-20: 24.00
+taper_rates:
+  description: Rate at which payment reduces for income above free area
+  metadata:
+    unit: /1
+  lower_taper:
+    description: Taper rate for income between free area and upper threshold
+    values:
+      2023-09-20: 0.50  # 50 cents per dollar
+      2024-01-01: 0.50
+      2024-09-20: 0.40  # Changed to 40 cents per dollar
+  upper_taper:
+    description: Taper rate for income above upper threshold
+    values:
+      2023-09-20: 0.60  # 60 cents per dollar
+      2024-01-01: 0.60
+      2024-09-20: 0.60
+upper_threshold:
+  description: Income level where higher taper rate applies
+  metadata:
+    unit: currency-AUD
+    period: fortnight
+  single:
+    values:
+      2023-09-20: 256.00
+      2024-01-01: 256.00
+      2024-09-20: 256.00
+  partnered:
+    values:
+      2023-09-20: 256.00
+      2024-01-01: 256.00
+      2024-09-20: 256.00
+working_credit:
+  description: Amount of unused income free area that can be accrued
+  metadata:
+    unit: currency-AUD
+  maximum_accrual:
+    values:
+      2023-09-20: 3_500.00
+      2024-01-01: 3_500.00
+      2024-09-20: 11_800.00  # Increased limit
+  accrual_rate:
+    description: Working credit accrual per fortnight when income below free area
+    values:
+      2023-09-20: 48.00
+      2024-01-01: 48.00
+      2024-09-20: 48.00

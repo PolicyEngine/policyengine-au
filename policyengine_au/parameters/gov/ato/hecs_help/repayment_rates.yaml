@@ -1,0 +1,98 @@
+description: HECS-HELP (student loan) repayment rates
+reference:
+  - title: Study and training loan repayment thresholds and rates
+    href: https://www.ato.gov.au/individuals-and-families/study-and-training-support-loans/study-and-training-loan-repayment-thresholds-and-rates
+metadata:
+  unit: /1
+  label: HECS-HELP repayment rates
+rates:
+  band_1:
+    description: Repayment rate for lowest income band
+    values:
+      2023-07-01: 0.01  # 1%
+      2024-07-01: 0.01
+  band_2:
+    description: Repayment rate for band 2
+    values:
+      2023-07-01: 0.02  # 2%
+      2024-07-01: 0.02
+  band_3:
+    description: Repayment rate for band 3
+    values:
+      2023-07-01: 0.025  # 2.5%
+      2024-07-01: 0.025
+  band_4:
+    description: Repayment rate for band 4
+    values:
+      2023-07-01: 0.03  # 3%
+      2024-07-01: 0.03
+  band_5:
+    description: Repayment rate for band 5
+    values:
+      2023-07-01: 0.035  # 3.5%
+      2024-07-01: 0.035
+  band_6:
+    description: Repayment rate for band 6
+    values:
+      2023-07-01: 0.04  # 4%
+      2024-07-01: 0.04
+  band_7:
+    description: Repayment rate for band 7
+    values:
+      2023-07-01: 0.045  # 4.5%
+      2024-07-01: 0.045
+  band_8:
+    description: Repayment rate for band 8
+    values:
+      2023-07-01: 0.05  # 5%
+      2024-07-01: 0.05
+  band_9:
+    description: Repayment rate for band 9
+    values:
+      2023-07-01: 0.055  # 5.5%
+      2024-07-01: 0.055
+  band_10:
+    description: Repayment rate for band 10
+    values:
+      2023-07-01: 0.06  # 6%
+      2024-07-01: 0.06
+  band_11:
+    description: Repayment rate for band 11
+    values:
+      2023-07-01: 0.065  # 6.5%
+      2024-07-01: 0.065
+  band_12:
+    description: Repayment rate for band 12
+    values:
+      2023-07-01: 0.07  # 7%
+      2024-07-01: 0.07
+  band_13:
+    description: Repayment rate for band 13
+    values:
+      2023-07-01: 0.075  # 7.5%
+      2024-07-01: 0.075
+  band_14:
+    description: Repayment rate for band 14
+    values:
+      2023-07-01: 0.08  # 8%
+      2024-07-01: 0.08
+  band_15:
+    description: Repayment rate for band 15
+    values:
+      2023-07-01: 0.085  # 8.5%
+      2024-07-01: 0.085
+  band_16:
+    description: Repayment rate for band 16
+    values:
+      2023-07-01: 0.09  # 9%
+      2024-07-01: 0.09
+  band_17:
+    description: Repayment rate for band 17
+    values:
+      2023-07-01: 0.095  # 9.5%
+      2024-07-01: 0.095
+  band_18:
+    description: Repayment rate for highest income band
+    values:
+      2023-07-01: 0.10  # 10%
+      2024-07-01: 0.10

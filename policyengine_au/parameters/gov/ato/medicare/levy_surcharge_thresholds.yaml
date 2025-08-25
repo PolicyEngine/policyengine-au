@@ -1,0 +1,52 @@
+description: Medicare levy surcharge income thresholds
+reference:
+  - title: Medicare levy surcharge income thresholds
+    href: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy-surcharge
+metadata:
+  unit: currency-AUD
+  label: Medicare levy surcharge thresholds
+  period: year
+singles:
+  tier_1:
+    description: Base tier threshold for singles
+    values:
+      2022-07-01: 90_000
+      2023-07-01: 93_000
+      2024-07-01: 97_000
+  tier_2:
+    description: Tier 2 threshold for singles
+    values:
+      2022-07-01: 105_000
+      2023-07-01: 108_000
+      2024-07-01: 113_000
+  tier_3:
+    description: Tier 3 threshold for singles
+    values:
+      2022-07-01: 140_000
+      2023-07-01: 144_000
+      2024-07-01: 151_000
+families:
+  tier_1:
+    description: Base tier threshold for families
+    values:
+      2022-07-01: 180_000
+      2023-07-01: 186_000
+      2024-07-01: 194_000
+  tier_2:
+    description: Tier 2 threshold for families
+    values:
+      2022-07-01: 210_000
+      2023-07-01: 216_000
+      2024-07-01: 226_000
+  tier_3:
+    description: Tier 3 threshold for families
+    values:
+      2022-07-01: 280_000
+      2023-07-01: 288_000
+      2024-07-01: 302_000
+additional_child_threshold:
+  description: Additional threshold per dependent child after first
+  values:
+    2022-07-01: 1_500
+    2023-07-01: 1_500
+    2024-07-01: 1_500

@@ -1,0 +1,38 @@
+description: Income tax rates by bracket
+reference:
+  - title: Individual income tax rates
+    href: https://www.ato.gov.au/tax-rates-and-codes/individual-income-tax-rates
+metadata:
+  unit: /1
+  label: Income tax rates
+rates:
+  bracket_1:
+    description: Tax rate for income in first bracket (tax-free threshold)
+    values:
+      2022-07-01: 0.0
+      2023-07-01: 0.0
+      2024-07-01: 0.0
+  bracket_2:
+    description: Tax rate for income $18,201 - $45,000
+    values:
+      2022-07-01: 0.19
+      2023-07-01: 0.19
+      2024-07-01: 0.19
+  bracket_3:
+    description: Tax rate for income $45,001 - $120,000
+    values:
+      2022-07-01: 0.325
+      2023-07-01: 0.325
+      2024-07-01: 0.30  # Stage 3 tax cuts
+  bracket_4:
+    description: Tax rate for income $120,001 - $180,000
+    values:
+      2022-07-01: 0.37
+      2023-07-01: 0.37
+      2024-07-01: 0.37
+  bracket_5:
+    description: Tax rate for income above $180,000
+    values:
+      2022-07-01: 0.45
+      2023-07-01: 0.45
+      2024-07-01: 0.45

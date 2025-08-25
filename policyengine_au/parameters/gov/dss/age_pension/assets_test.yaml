@@ -1,0 +1,83 @@
+description: Age Pension assets test parameters
+reference:
+  - title: Age Pension assets test
+    href: https://www.servicesaustralia.gov.au/assets-test-for-age-pension
+metadata:
+  label: Age Pension assets test
+assets_free_area:
+  description: Asset value allowed before pension reduction
+  metadata:
+    unit: currency-AUD
+  single:
+    homeowner:
+      values:
+        2023-07-01: 301_750
+        2024-01-01: 314_000
+        2024-07-01: 314_000
+    non_homeowner:
+      values:
+        2023-07-01: 543_750
+        2024-01-01: 566_000
+        2024-07-01: 566_000
+  couple_combined:
+    homeowner:
+      values:
+        2023-07-01: 451_500
+        2024-01-01: 470_000
+        2024-07-01: 470_000
+    non_homeowner:
+      values:
+        2023-07-01: 693_500
+        2024-01-01: 722_000
+        2024-07-01: 722_000
+  couple_separated_illness:
+    homeowner:
+      values:
+        2023-07-01: 451_500
+        2024-01-01: 470_000
+        2024-07-01: 470_000
+    non_homeowner:
+      values:
+        2023-07-01: 693_500
+        2024-01-01: 722_000
+        2024-07-01: 722_000
+taper_rate:
+  description: Rate at which pension reduces per $1000 of assets above free area
+  metadata:
+    unit: currency-AUD
+  single:
+    values:
+      2023-07-01: 78.00  # $3 per fortnight per $1000
+      2024-01-01: 78.00
+      2024-07-01: 78.00
+  couple_combined:
+    values:
+      2023-07-01: 78.00
+      2024-01-01: 78.00
+      2024-07-01: 78.00
+assets_cutoff:
+  description: Asset levels where pension reduces to zero
+  metadata:
+    unit: currency-AUD
+  single:
+    homeowner:
+      values:
+        2023-07-01: 674_000
+        2024-01-01: 695_500
+        2024-07-01: 695_500
+    non_homeowner:
+      values:
+        2023-07-01: 916_000
+        2024-01-01: 947_500
+        2024-07-01: 947_500
+  couple_combined:
+    homeowner:
+      values:
+        2023-07-01: 1_012_500
+        2024-01-01: 1_045_500
+        2024-07-01: 1_045_500
+    non_homeowner:
+      values:
+        2023-07-01: 1_254_500
+        2024-01-01: 1_297_500
+        2024-07-01: 1_297_500

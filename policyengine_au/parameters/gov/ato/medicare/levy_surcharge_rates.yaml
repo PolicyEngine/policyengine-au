@@ -1,0 +1,25 @@
+description: Medicare levy surcharge rates for high income earners without private health insurance
+reference:
+  - title: Medicare levy surcharge
+    href: https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy-surcharge
+metadata:
+  unit: /1
+  label: Medicare levy surcharge rates
+tier_1:
+  description: Base tier surcharge (singles $93,000-$108,000, families $186,000-$216,000)
+  values:
+    2022-07-01: 0.01  # 1% surcharge
+    2023-07-01: 0.01
+    2024-07-01: 0.01
+tier_2:
+  description: Tier 2 surcharge (singles $108,001-$144,000, families $216,001-$288,000)
+  values:
+    2022-07-01: 0.0125  # 1.25% surcharge
+    2023-07-01: 0.0125
+    2024-07-01: 0.0125
+tier_3:
+  description: Tier 3 surcharge (singles above $144,000, families above $288,000)
+  values:
+    2022-07-01: 0.015  # 1.5% surcharge
+    2023-07-01: 0.015
+    2024-07-01: 0.015

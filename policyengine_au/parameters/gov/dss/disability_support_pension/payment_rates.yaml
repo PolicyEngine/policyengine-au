@@ -1,0 +1,97 @@
+description: Disability Support Pension payment rates
+reference:
+  - title: Disability Support Pension - Payment rates
+    href: https://www.servicesaustralia.gov.au/payment-rates-for-disability-support-pension
+metadata:
+  unit: currency-AUD
+  label: Disability Support Pension rates
+  period: fortnight
+  uprating: gov.treasury.cpi
+single:
+  under_21_no_children:
+    at_home:
+      description: Single, under 21, no children, living at home
+      values:
+        2023-09-20: 585.50
+        2024-01-01: 602.50
+        2024-03-20: 644.70
+    independent:
+      description: Single, under 21, no children, living independently
+      values:
+        2023-09-20: 764.00
+        2024-01-01: 786.70
+        2024-03-20: 841.80
+  21_and_over:
+    description: Single, 21 and over
+    values:
+      2023-09-20: 1_064.00
+      2024-01-01: 1_096.70
+      2024-03-20: 1_173.90
+  with_dependent_children:
+    description: Single with dependent children
+    values:
+      2023-09-20: 1_151.20
+      2024-01-01: 1_186.60
+      2024-03-20: 1_270.30
+couple:
+  each:
+    description: Couple, each person
+    values:
+      2023-09-20: 802.00
+      2024-01-01: 826.20
+      2024-03-20: 884.20
+  separated_illness:
+    description: Couple separated due to illness, respite or prison
+    values:
+      2023-09-20: 1_064.00
+      2024-01-01: 1_096.70
+      2024-03-20: 1_173.90
+youth_disability_supplement:
+  description: Youth Disability Supplement for under 21
+  values:
+    2023-09-20: 144.80
+    2024-01-01: 149.20
+    2024-03-20: 159.70
+pension_supplement:
+  single:
+    maximum:
+      description: Maximum pension supplement for singles
+      values:
+        2023-09-20: 81.60
+        2024-01-01: 84.00
+        2024-03-20: 89.90
+    minimum:
+      description: Minimum pension supplement for singles
+      values:
+        2023-09-20: 53.00
+        2024-01-01: 54.60
+        2024-03-20: 58.40
+  couple_each:
+    maximum:
+      description: Maximum pension supplement per person in couple
+      values:
+        2023-09-20: 61.40
+        2024-01-01: 63.20
+        2024-03-20: 67.70
+    minimum:
+      description: Minimum pension supplement per person in couple
+      values:
+        2023-09-20: 39.90
+        2024-01-01: 41.10
+        2024-03-20: 44.00
+energy_supplement:
+  single:
+    values:
+      2023-09-20: 14.10
+      2024-01-01: 14.10
+      2024-03-20: 14.10
+  couple_each:
+    values:
+      2023-09-20: 10.60
+      2024-01-01: 10.60
+      2024-03-20: 10.60
+  single_under_21:
+    values:
+      2023-09-20: 9.50
+      2024-01-01: 9.50
+      2024-03-20: 9.50
