@@ -6,6 +6,7 @@ This file configures pytest to discover and run YAML-based policy tests.
 
 import pytest
 import yaml
+import numpy as np
 from pathlib import Path
 from policyengine_au import AustralianTaxBenefitSystem
 from policyengine_core.simulations import Simulation
@@ -64,7 +65,9 @@ class YamlTestItem(pytest.Item):
                     calculated = calculated[0]
 
                 # Allow small tolerance for floating point comparisons
-                if isinstance(expected_value, (int, float)):
+                if isinstance(expected_value, (int, float)) and isinstance(
+                    calculated, (int, float, np.number)
+                ):
                     assert (
                         abs(calculated - expected_value) < 0.01
                     ), f"{variable_name}: expected {expected_value}, got {calculated}"
