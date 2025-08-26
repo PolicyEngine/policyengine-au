@@ -29,7 +29,7 @@ class state_payroll_tax(Variable):
         }
 
         # Calculate tax for each state and select the appropriate one
-        tax = zeros(household.count)
+        tax = household("employment_income", period) * 0  # Initialize array of zeros
         for state_code, tax_variable in state_tax_map.items():
             is_state = state == state_code
             state_tax = household(tax_variable, period)
