@@ -61,7 +61,7 @@ jobs:
       
       - name: Install package
         run: |
-          uv pip install --system -e .[dev]
+          uv sync --dev
       
       - name: Run tests
         run: |
@@ -95,11 +95,11 @@ jobs:
       
       - name: Install package with docs dependencies
         run: |
-          uv pip install --system -e .[dev]
+          uv sync --dev
       
       - name: Build documentation
         run: |
-          myst build docs -o docs/_build
+          myst build docs --html -o docs/_build
 
   yaml-tests:
     name: YAML Policy Tests

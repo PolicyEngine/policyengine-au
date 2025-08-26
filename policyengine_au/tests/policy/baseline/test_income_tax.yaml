@@ -3,8 +3,10 @@
   input:
     people:
       person_1:
-        age: 30
-        employment_income: 0
+        age:
+          2024: 30
+        employment_income:
+          2024: 0
   output:
     income_tax: 0
     medicare_levy: 0
@@ -14,8 +16,10 @@
   input:
     people:
       person_1:
-        age: 30
-        employment_income: 18_000
+        age:
+          2024: 30
+        employment_income:
+          2024: 18_000
   output:
     income_tax: 0
     medicare_levy: 0  # Below Medicare levy threshold
@@ -25,8 +29,10 @@
   input:
     people:
       person_1:
-        age: 35
-        employment_income: 50_000
+        age:
+          2024: 35
+        employment_income:
+          2024: 50_000
   output:
     taxable_income: 50_000
     income_tax: 6_717  # Tax on income above $18,200
@@ -37,8 +43,10 @@
   input:
     people:
       person_1:
-        age: 40
-        employment_income: 80_000
+        age:
+          2024: 40
+        employment_income:
+          2024: 80_000
   output:
     taxable_income: 80_000
     income_tax: 16_467  # Progressive tax calculation
@@ -49,8 +57,10 @@
   input:
     people:
       person_1:
-        age: 45
-        employment_income: 120_000
+        age:
+          2024: 45
+        employment_income:
+          2024: 120_000
   output:
     taxable_income: 120_000
     income_tax: 28_467  # Progressive tax calculation
@@ -61,8 +71,10 @@
   input:
     people:
       person_1:
-        age: 50
-        employment_income: 200_000
+        age:
+          2024: 50
+        employment_income:
+          2024: 200_000
   output:
     taxable_income: 200_000
     income_tax: 60_667  # Progressive tax including 45% bracket
@@ -73,8 +85,10 @@
   input:
     people:
       person_1:
-        age: 40
-        employment_income: 150_000
+        age:
+          2024-07-01: 40
+        employment_income:
+          2024-07-01: 150_000
   output:
     taxable_income: 150_000
     income_tax: 39_567  # With Stage 3 tax cuts

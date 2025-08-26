@@ -3,9 +3,12 @@
   input:
     people:
       pensioner:
-        age: 70
-        employment_income: 0
-        investment_income: 0
+        age:
+          2024: 70
+        employment_income:
+          2024: 0
+        investment_income:
+          2024: 0
     households:
       household:
         members: [pensioner]
@@ -17,8 +20,10 @@
   input:
     people:
       person:
-        age: 65
-        employment_income: 0
+        age:
+          2024: 65
+        employment_income:
+          2024: 0
     households:
       household:
         members: [person]
@@ -30,8 +35,10 @@
   input:
     people:
       pensioner:
-        age: 67
-        employment_income: 0
+        age:
+          2024: 67
+        employment_income:
+          2024: 0
     households:
       household:
         members: [pensioner]
@@ -43,11 +50,15 @@
   input:
     people:
       pensioner_1:
-        age: 70
-        employment_income: 0
+        age:
+          2024: 70
+        employment_income:
+          2024: 0
       pensioner_2:
-        age: 68
-        employment_income: 0
+        age:
+          2024: 68
+        employment_income:
+          2024: 0
     households:
       household:
         members: [pensioner_1, pensioner_2]
