@@ -81,14 +81,14 @@
     medicare_levy: 4_000  # 2% of $200,000
 
 - name: Stage 3 tax cuts example - $150,000 income
-  period: 2024-07-01
+  period: 2025
   input:
     people:
       person_1:
         age:
-          2024-07-01: 40
+          2025: 40
         employment_income:
-          2024-07-01: 150_000
+          2025: 150_000
   output:
     taxable_income: 150_000
     income_tax: 39_567  # With Stage 3 tax cuts
