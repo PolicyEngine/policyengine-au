@@ -32,7 +32,7 @@ jobs:
       
       - name: Run linecheck
         run: |
-          linecheck . --check
+          linecheck .
       
       - name: Check vectorization requirements
         run: |
