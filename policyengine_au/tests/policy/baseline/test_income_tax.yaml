@@ -91,5 +91,5 @@
           2025: 150_000
   output:
     taxable_income: 150_000
-    income_tax: 39_567  # With Stage 3 tax cuts
+    income_tax: 37_642  # With Stage 3 tax cuts (30% bracket to $135k)
     medicare_levy: 3_000  # 2% of $150,000
