@@ -90,7 +90,7 @@ jobs:
       
       - name: Build documentation
         run: |
-          uv run myst build docs --html -o docs/_build
+          uv run mystmd build docs --html -o docs/_build
 
   yaml-tests:
     name: YAML Policy Tests
