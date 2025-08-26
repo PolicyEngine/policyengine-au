@@ -16,8 +16,10 @@ class income_tax(Variable):
         taxable_income = person("taxable_income", period)
         p = parameters(period).gov.ato.income_tax.tax_scale
         
-        # Ensure no negative tax for negative income
-        # max_(0, income) ensures we don't calculate tax on losses
+        # Handle negative taxable income (tax losses)
+        # Per ATO rules: tax losses are carried forward to future years
+        # No tax is payable on negative taxable income
+        # Reference: https://www.ato.gov.au/businesses-and-organisations/income-deductions-and-concessions/losses/losses/what-is-a-tax-loss
         positive_income = max_(0, taxable_income)
         
         # Use the marginal_rate_tax function with the scale parameter
