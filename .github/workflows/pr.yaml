@@ -32,7 +32,11 @@ jobs:
       
       - name: Run linecheck
         run: |
-          linecheck . --check
+          linecheck .
+      
+      - name: Check vectorization requirements
+        run: |
+          uv run python check_vectorization.py policyengine_au/variables
 
   test:
     name: Test
@@ -57,20 +61,11 @@ jobs:
       
       - name: Install package
         run: |
-          uv pip install --system -e .[dev]
+          uv sync --dev
       
       - name: Run tests
         run: |
-          uv run pytest policyengine_au/tests -v --cov=policyengine_au --cov-report=xml
-      
-      - name: Upload coverage to Codecov
-        if: matrix.python-version == '3.13'
-        uses: codecov/codecov-action@v4
-        with:
-          file: ./coverage.xml
-          flags: unittests
-          name: codecov-umbrella
-          fail_ci_if_error: false
+          uv run pytest policyengine_au/tests -v
 
   documentation:
     name: Build Documentation
@@ -91,11 +86,11 @@ jobs:
       
       - name: Install package with docs dependencies
         run: |
-          uv pip install --system -e .[dev]
+          uv sync --dev
       
       - name: Build documentation
         run: |
-          myst build docs -o docs/_build
+          uv run mystmd build docs --html -o docs/_build
 
   yaml-tests:
     name: YAML Policy Tests

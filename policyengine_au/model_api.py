@@ -18,7 +18,7 @@ from policyengine_au.entities import (
 )
 
 # Import Australian state codes
-from policyengine_au.variables.input.demographics.state import StateCode
+from policyengine_au.variables.input.demographics.state_code import StateCode
 
 # Currency unit
 AUD = "currency-AUD"
