@@ -26,23 +26,24 @@ class medicare_levy(Variable):
 
         # For simplicity, assume single person initially
         # TODO: Add family status detection
-        is_single = True
+        # Use singles thresholds for now
+        no_levy_threshold = thresholds.singles.no_levy_threshold
+        full_levy_threshold = thresholds.singles.full_levy_threshold
 
-        if is_single:
-            no_levy_threshold = thresholds.singles.no_levy_threshold
-            full_levy_threshold = thresholds.singles.full_levy_threshold
-        else:
-            # Family thresholds would be used here
-            no_levy_threshold = thresholds.families.no_levy_threshold
-            full_levy_threshold = thresholds.families.full_levy_threshold
-
-        # Calculate Medicare levy
-        if taxable_income <= no_levy_threshold:
-            # No Medicare levy for low income
-            return 0
-        elif taxable_income <= full_levy_threshold:
-            # Shade-in range: 10% of income above threshold
-            return (taxable_income - no_levy_threshold) * 0.10
-        else:
-            # Full Medicare levy (2% of taxable income)
-            return taxable_income * levy_rate
+        # Calculate Medicare levy using vectorized operations
+        # No levy below threshold
+        no_levy = taxable_income <= no_levy_threshold
+        
+        # Shade-in range: 10% of income above threshold
+        shade_in_range = (taxable_income > no_levy_threshold) & (taxable_income <= full_levy_threshold)
+        shade_in_amount = (taxable_income - no_levy_threshold) * 0.10
+        
+        # Full levy: 2% of taxable income
+        full_levy_amount = taxable_income * levy_rate
+        
+        # Select appropriate levy amount based on income
+        return select(
+            [no_levy, shade_in_range],
+            [0, shade_in_amount],
+            default=full_levy_amount
+        )

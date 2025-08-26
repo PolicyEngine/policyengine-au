@@ -16,7 +16,7 @@ Australia uses a progressive income tax system with the following brackets:
 | $135,001 - $190,000 | 37% | High income bracket |
 | $190,001+ | 45% | Top marginal rate |
 
-**Reference**: [ATO Individual Income Tax Rates](https://www.ato.gov.au/tax-rates-and-codes/individual-income-tax-rates)
+**Reference**: [ATO Tax Rates - Australian Residents](https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents)
 
 ### Implementation
 

@@ -1,0 +1,29 @@
+description: Australian income tax scale for residents
+metadata:
+  type: marginal_rate
+  threshold_unit: currency-AUD
+  rate_unit: /1
+brackets:
+  - threshold:
+      2024-01-01: 0
+    rate:
+      2024-01-01: 0  # Tax-free threshold
+  - threshold:
+      2024-01-01: 18_200
+    rate:
+      2024-01-01: 0.19  # 19% rate
+  - threshold:
+      2024-07-01: 45_000
+    rate:
+      2024-07-01: 0.30  # 30% rate (Stage 3 tax cuts)
+  - threshold:
+      2024-07-01: 135_000
+    rate:
+      2024-07-01: 0.37  # 37% rate
+  - threshold:
+      2024-07-01: 190_000
+    rate:
+      2024-07-01: 0.45  # 45% top rate
+reference:
+  - title: ATO Tax Rates - Australian Residents
+    href: https://www.ato.gov.au/tax-rates-and-codes/tax-rates-australian-residents
