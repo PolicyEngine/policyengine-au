@@ -17,8 +17,8 @@ from policyengine_au.entities import (
     Household,
 )
 
-# StateCode is defined in variables/input/demographics/state.py
-# Import it directly in files that need it to avoid circular imports
+# Import Australian state codes
+from policyengine_au.variables.input.demographics.state_code import StateCode
 
 # Currency unit
 AUD = "currency-AUD"
