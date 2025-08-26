@@ -63,7 +63,7 @@
           2024: 120_000
   output:
     taxable_income: 120_000
-    income_tax: 28_467  # Progressive tax calculation
+    income_tax: 29_467  # Progressive tax calculation (pre-Stage 3)
     medicare_levy: 2_400  # 2% of $120,000
 
 - name: High income earner with $200,000 income

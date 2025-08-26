@@ -63,7 +63,8 @@
       household:
         members: [pensioner_1, pensioner_2]
   output:
-    pensioner_1:
-      age_pension_eligible: True
-    pensioner_2:
-      age_pension_eligible: True
+    people:
+      pensioner_1:
+        age_pension_eligible: True
+      pensioner_2:
+        age_pension_eligible: True
