@@ -7,6 +7,9 @@ format:
 	black . -l 79
 	linecheck . --fix
 
+check-vectorization:
+	uv run python check_vectorization.py policyengine_au/variables
+
 install:
 	uv pip install --system -e .[dev]
 
@@ -30,4 +33,4 @@ clean:
 	find . -type d -name "__pycache__" -delete
 	rm -rf build dist *.egg-info .coverage htmlcov
 
-.PHONY: all documentation format install test test-cov test-lite build changelog clean
+.PHONY: all documentation format install test test-cov test-lite build changelog clean check-vectorization

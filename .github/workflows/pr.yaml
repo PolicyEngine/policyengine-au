@@ -33,6 +33,10 @@ jobs:
       - name: Run linecheck
         run: |
           linecheck . --check
+      
+      - name: Check vectorization requirements
+        run: |
+          uv run python check_vectorization.py policyengine_au/variables
 
   test:
     name: Test
