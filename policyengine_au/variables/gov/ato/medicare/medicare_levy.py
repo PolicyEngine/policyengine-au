@@ -33,17 +33,19 @@ class medicare_levy(Variable):
         # Calculate Medicare levy using vectorized operations
         # No levy below threshold
         no_levy = taxable_income <= no_levy_threshold
-        
+
         # Shade-in range: 10% of income above threshold
-        shade_in_range = (taxable_income > no_levy_threshold) & (taxable_income <= full_levy_threshold)
+        shade_in_range = (taxable_income > no_levy_threshold) & (
+            taxable_income <= full_levy_threshold
+        )
         shade_in_amount = (taxable_income - no_levy_threshold) * 0.10
-        
+
         # Full levy: 2% of taxable income
         full_levy_amount = taxable_income * levy_rate
-        
+
         # Select appropriate levy amount based on income
         return select(
             [no_levy, shade_in_range],
             [0, shade_in_amount],
-            default=full_levy_amount
+            default=full_levy_amount,
         )
