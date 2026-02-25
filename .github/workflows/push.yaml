@@ -31,17 +31,9 @@ jobs:
           black . -l 79 --check
           linecheck . --check
       
-      - name: Run all tests with coverage
+      - name: Run tests
         run: |
-          uv run pytest policyengine_au/tests -v --cov=policyengine_au --cov-report=xml --cov-report=term-missing
-      
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          file: ./coverage.xml
-          flags: unittests
-          name: codecov-umbrella
-          fail_ci_if_error: true
+          uv run pytest policyengine_au/tests -v
       
       - name: Build package
         run: |
@@ -52,34 +44,65 @@ jobs:
           pip install twine
           twine check dist/*
 
+  versioning:
+    name: Update version and changelog
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: lint-test-build
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Build changelog
+        run: |
+          pip install towncrier
+          python .github/bump_version.py
+          towncrier build --yes --version $(python -c "import re; print(re.search(r'version = \"(.+?)\"', open('pyproject.toml').read()).group(1))")
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "Update changelog and version [skip ci]"
+          git push
+
   deploy-docs:
     name: Deploy Documentation
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: lint-test-build
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-      
+
       - name: Install uv
         uses: astral-sh/setup-uv@v3
         with:
           enable-cache: true
           cache-dependency-glob: "**/pyproject.toml"
-      
+
       - name: Install package with docs dependencies
         run: |
           uv pip install --system -e .[dev]
-      
+
       - name: Build documentation
         run: |
           myst build docs
-      
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
