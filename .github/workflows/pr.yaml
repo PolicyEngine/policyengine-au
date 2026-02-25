@@ -61,16 +61,7 @@ jobs:
       
       - name: Run tests
         run: |
-          uv run pytest policyengine_au/tests -v --cov=policyengine_au --cov-report=xml
-      
-      - name: Upload coverage to Codecov
-        if: matrix.python-version == '3.13'
-        uses: codecov/codecov-action@v4
-        with:
-          file: ./coverage.xml
-          flags: unittests
-          name: codecov-umbrella
-          fail_ci_if_error: false
+          uv run pytest policyengine_au/tests -v
 
   documentation:
     name: Build Documentation
@@ -95,7 +86,7 @@ jobs:
       
       - name: Build documentation
         run: |
-          myst build docs -o docs/_build
+          myst build docs --html
 
   yaml-tests:
     name: YAML Policy Tests
