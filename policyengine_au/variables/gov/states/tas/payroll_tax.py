@@ -7,7 +7,9 @@ class tas_payroll_tax(Variable):
     label = "TAS payroll tax"
     definition_period = YEAR
     unit = "AUD"
-    reference = "https://www.legislation.tas.gov.au/view/html/inforce/current/act-2008-016"
+    reference = (
+        "https://www.legislation.tas.gov.au/view/html/inforce/current/act-2008-016"
+    )
 
     def formula(household, period, parameters):
         # Get TAS payroll tax parameters

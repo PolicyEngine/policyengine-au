@@ -7,7 +7,9 @@ class sa_payroll_tax(Variable):
     label = "SA payroll tax"
     definition_period = YEAR
     unit = "AUD"
-    reference = "https://www.legislation.sa.gov.au/LZ/C/A/Payroll%20Tax%20Act%202009.aspx"
+    reference = (
+        "https://www.legislation.sa.gov.au/LZ/C/A/Payroll%20Tax%20Act%202009.aspx"
+    )
 
     def formula(household, period, parameters):
         # Get SA payroll tax parameters

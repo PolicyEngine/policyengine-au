@@ -17,6 +17,4 @@ class household_state(Variable):
 
     def formula(household, period, parameters):
         # Use the state of the household head (first person)
-        return household.value_from_first_person(
-            household.members("state", period)
-        )
+        return household.value_from_first_person(household.members("state", period))

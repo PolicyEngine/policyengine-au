@@ -8,9 +8,7 @@ class medicare_levy(Variable):
     entity = Person
     definition_period = YEAR
     label = "Medicare levy"
-    documentation = (
-        "Medicare levy based on taxable income and family circumstances"
-    )
+    documentation = "Medicare levy based on taxable income and family circumstances"
     reference = "https://www.ato.gov.au/individuals-and-families/medicare-and-private-health-insurance/medicare-levy"
     unit = AUD
 
