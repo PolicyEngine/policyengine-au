@@ -7,9 +7,7 @@ class vic_payroll_tax(Variable):
     label = "VIC payroll tax"
     definition_period = YEAR
     unit = "AUD"
-    reference = (
-        "https://www.legislation.vic.gov.au/in-force/acts/payroll-tax-act-2007"
-    )
+    reference = "https://www.legislation.vic.gov.au/in-force/acts/payroll-tax-act-2007"
 
     def formula(household, period, parameters):
         # Get VIC payroll tax parameters

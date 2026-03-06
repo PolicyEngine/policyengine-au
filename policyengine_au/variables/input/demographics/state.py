@@ -23,7 +23,5 @@ class state(Variable):
     entity = Person
     definition_period = YEAR
     label = "State or territory of residence"
-    documentation = (
-        "The Australian state or territory where the person resides"
-    )
+    documentation = "The Australian state or territory where the person resides"
     reference = "https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3"

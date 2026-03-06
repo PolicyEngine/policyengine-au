@@ -28,8 +28,7 @@ jobs:
       
       - name: Check formatting
         run: |
-          black . -l 79 --check
-          linecheck . --check
+          ruff format --check .
       
       - name: Run tests
         run: |

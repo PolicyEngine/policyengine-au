@@ -24,8 +24,7 @@ class wa_payroll_tax(Variable):
 
         # Vectorized threshold calculation
         reduction = (
-            clip(wages - lower_limit, 0, upper_limit - lower_limit)
-            * reduction_rate
+            clip(wages - lower_limit, 0, upper_limit - lower_limit) * reduction_rate
         )
         effective_threshold = select(
             [wages <= lower_limit, wages <= upper_limit],

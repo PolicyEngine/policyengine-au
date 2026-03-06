@@ -7,7 +7,9 @@ class qld_payroll_tax(Variable):
     label = "QLD payroll tax"
     definition_period = YEAR
     unit = "AUD"
-    reference = "https://www.legislation.qld.gov.au/view/html/inforce/current/act-1971-062"
+    reference = (
+        "https://www.legislation.qld.gov.au/view/html/inforce/current/act-1971-062"
+    )
 
     def formula(household, period, parameters):
         # Get QLD payroll tax parameters

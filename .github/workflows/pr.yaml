@@ -24,15 +24,11 @@ jobs:
       
       - name: Install dependencies
         run: |
-          uv pip install --system black linecheck
-      
-      - name: Check formatting with Black
+          uv pip install --system ruff
+
+      - name: Check formatting with ruff
         run: |
-          black . -l 79 --check
-      
-      - name: Run linecheck
-        run: |
-          linecheck . --check
+          ruff format --check .
 
   test:
     name: Test

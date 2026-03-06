@@ -28,9 +28,9 @@ def test_entities_loaded():
     entity_keys = {entity.key for entity in system.entities}
 
     for entity_name in expected_entities:
-        assert (
-            entity_name in entity_keys
-        ), f"Entity {entity_name} not found in {entity_keys}"
+        assert entity_name in entity_keys, (
+            f"Entity {entity_name} not found in {entity_keys}"
+        )
 
     # Check that person_entity is accessible (main entity)
     assert system.person_entity is not None
@@ -52,10 +52,7 @@ def test_parameters_loaded():
     p_2024 = parameters(period)
 
     # Test income tax parameters
-    assert (
-        p_2024.gov.ato.income_tax.thresholds.thresholds.tax_free_threshold
-        == 18_200
-    )
+    assert p_2024.gov.ato.income_tax.thresholds.thresholds.tax_free_threshold == 18_200
     assert p_2024.gov.ato.income_tax.rates.rates.bracket_2 == 0.19
 
     # Test Medicare levy

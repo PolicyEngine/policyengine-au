@@ -7,9 +7,7 @@ class nt_payroll_tax(Variable):
     label = "NT payroll tax"
     definition_period = YEAR
     unit = "AUD"
-    reference = (
-        "https://legislation.nt.gov.au/en/Legislation/PAYROLL-TAX-ACT-2009"
-    )
+    reference = "https://legislation.nt.gov.au/en/Legislation/PAYROLL-TAX-ACT-2009"
 
     def formula(household, period, parameters):
         # Get NT payroll tax parameters
