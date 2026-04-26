@@ -1,5 +1,6 @@
 from policyengine_core.model_api import *
 from policyengine_au.entities import *
+from policyengine_au.variables.input.demographics.state import StateCode
 
 
 class state_payroll_tax(Variable):
