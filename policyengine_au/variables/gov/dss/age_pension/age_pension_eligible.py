@@ -16,7 +16,7 @@ class age_pension_eligible(Variable):
         p_eligibility = parameters(period).gov.dss.age_pension.eligibility
 
         # Current age threshold is 67
-        age_threshold = p_eligibility.age_threshold.current
+        age_threshold = p_eligibility.age_threshold
 
         # Check age eligibility
         age_eligible = age >= age_threshold
