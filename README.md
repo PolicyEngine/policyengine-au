@@ -1,6 +1,6 @@
 # PolicyEngine Australia
 
-[![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://www.python.org/)
+[![Python Version](https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-blue)](https://www.python.org/)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
@@ -35,7 +35,7 @@ PolicyEngine Australia is a free, open-source microsimulation model of Australia
 ## Installation
 
 ### Requirements
-- Python 3.10 or higher (3.13 recommended)
+- Python 3.11 or higher (3.13 recommended)
 - pip or uv package manager
 
 ### Install from source

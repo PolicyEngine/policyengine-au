@@ -18,7 +18,7 @@ This document outlines the systematic approach used to build PolicyEngine micros
 
 ### 3. Modern Python Tooling
 - Use `uv` for fast package management
-- Python 3.13 as primary version (3.10+ supported)
+- Python 3.13 as primary version (3.11+ supported)
 - Black formatter with 79-character line length
 - Type hints where beneficial
 
@@ -229,7 +229,7 @@ jobs:
   lint:
     # Black formatting check
   test:
-    # pytest on Python 3.10-3.13
+    # pytest on Python 3.11-3.13
   documentation:
     # Build Jupyter Book
 ```
