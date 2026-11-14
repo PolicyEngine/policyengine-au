@@ -19,7 +19,7 @@ PolicyEngine Australia follows these key principles:
 ### 3. Continuous Integration
 - Automated testing on all pull requests
 - Code formatting with Black (79 chars)
-- Python 3.10-3.13 compatibility
+- Python 3.11-3.13 compatibility
 
 ### 4. Modern Python Tooling
 - `uv` for fast package management
@@ -29,7 +29,7 @@ PolicyEngine Australia follows these key principles:
 ## Setting Up Development Environment
 
 ### Prerequisites
-- Python 3.10 or higher (3.13 recommended)
+- Python 3.11 or higher (3.13 recommended)
 - Git
 - uv (recommended) or pip
 
@@ -281,7 +281,7 @@ open docs/_build/index.html
 
 ### Pull Request Checks
 1. **Formatting**: Black and linecheck
-2. **Tests**: All Python versions (3.10-3.13)
+2. **Tests**: All Python versions (3.11-3.13)
 3. **Coverage**: Maintained above threshold
 4. **Documentation**: Builds successfully
 
